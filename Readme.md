@@ -32,8 +32,15 @@ cd the_movie_app
 npm install
 ```
 
+### 3. Configuration
+
+Add TMDB API-KEY inside package.json / projectConfig.apiKey
+
 ```sh
-git clone https://github.com/ameenfarook/the_movie_app.git
+# add tmdb api-key here
+"projectConfig": {
+    "apiKey": "<put the api key from tmdb here>"
+  }
 ```
 
 ### 4. Start the app
