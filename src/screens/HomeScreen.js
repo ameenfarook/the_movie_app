@@ -14,7 +14,7 @@ import {
 
 const Genres = ["All", "Action", "Comedy", "Romance", "Horror", "Sci-Fi"];
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
   const [activeGenre, setActiveGenre] = useState("All");
   const [nowPlayingMovies, setNowPlayingMovies] = useState({});
   const [upcomingMovies, setUpcomingMovies] = useState({});
@@ -78,6 +78,7 @@ const HomeScreen = () => {
               voteCount={item.vote_count}
               poster={item.poster_path}
               heartLess={false}
+              onPress={() => navigation.navigate("movie", { movieId: item.id })}
             />
           )}
         />
@@ -103,6 +104,7 @@ const HomeScreen = () => {
               voteCount={item.vote_count}
               poster={item.poster_path}
               size={0.6}
+              onPress={() => navigation.navigate("movie", { movieId: item.id })}
             />
           )}
         />
